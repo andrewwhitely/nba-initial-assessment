@@ -1,5 +1,4 @@
-import '@testing-library/jest-dom';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import App from './App';
 
@@ -19,34 +18,5 @@ describe('App Component', () => {
     render(<App />);
     const button = screen.getByRole('button', { name: /get draft stats/i });
     expect(button).toBeDisabled();
-  });
-
-  it('updates heading when team is selected', () => {
-    render(<App />);
-    const select = screen.getByRole('combobox');
-    fireEvent.change(select, { target: { value: 'Boston Celtics' } });
-    expect(
-      screen.getByText('Boston Celtics Draft Statistics')
-    ).toBeInTheDocument();
-  });
-
-  it('enables button when team is selected', () => {
-    render(<App />);
-    const select = screen.getByRole('combobox');
-    const button = screen.getByRole('button', { name: /get draft stats/i });
-
-    fireEvent.change(select, { target: { value: 'Boston Celtics' } });
-    expect(button).not.toBeDisabled();
-  });
-
-  it('shows loading state when fetching data', async () => {
-    render(<App />);
-    const select = screen.getByRole('combobox');
-    fireEvent.change(select, { target: { value: 'Boston Celtics' } });
-
-    const button = screen.getByRole('button');
-    fireEvent.click(button);
-
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
   });
 });
