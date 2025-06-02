@@ -1,0 +1,171 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.team-select {
+  padding: 8px;
+  margin-right: 10px;
+  min-width: 200px;
+  font-size: 16px;
+}
+
+.team-select optgroup {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  padding: 8px;
+}
+
+.team-select option {
+  font-weight: normal;
+  padding: 8px;
+  background-color: white;
+}
+
+.team-select option:first-of-type {
+  font-style: italic;
+  color: #666;
+}
+
+.stats-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.stat-item p {
+  margin: 0.25rem 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.json-output {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.json-output summary {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.json-output pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.stats-container details {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.stats-container details summary {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.stats-container details pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .stats-container {
+    background-color: #2a2a2a;
+  }
+
+  .stat-item {
+    background-color: #333;
+  }
+
+  .stat-item h3 {
+    color: #fff;
+  }
+
+  .stat-item p {
+    color: #ccc;
+  }
+
+  .json-output summary {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .stats-container details summary {
+    background-color: #333;
+  }
+}
