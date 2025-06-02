@@ -1,7 +1,5 @@
 # nba initial assessment
 
-## Expanding the ESLint configuration
-
 If you are running locally:
 
 ```js
